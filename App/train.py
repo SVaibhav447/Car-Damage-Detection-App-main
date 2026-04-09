@@ -14,6 +14,10 @@ from torch.optim.lr_scheduler import StepLR
 from collections import Counter
 from model_helper import CarClassifierResNet
 
+print(torch.cuda.is_available())
+print(torch.cuda.device_count())
+print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else "No GPU")
+
 # ─────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────
